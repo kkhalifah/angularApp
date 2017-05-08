@@ -25,6 +25,5 @@ return {
   getInput: function () {
     return input
   }
-
 }
 });

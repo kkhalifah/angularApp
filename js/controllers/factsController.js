@@ -7,12 +7,12 @@ app.controller('factsController', function($scope, $http) {
 
   $http({
     method: 'GET',
-    url: 'https://matchilling-chuck-norris-jokes-v1.p.mashape.com/jokes/categories' + '.json',
-    params: {}
+    url: 'https://matchilling-chuck-norris-jokes-v1.p.mashape.com/jokes/search' + '.json',
+    params: { limit : '3' }
   }).then(function successCallback(response) {
   //log the API info
     console.log(response.data.data.children);
-    $scope.posts = response.data.data.children;
+    $scope.facts = response.data.data.children;
   }, function(error) {
     console.log(error);
     })
