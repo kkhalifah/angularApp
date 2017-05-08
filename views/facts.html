@@ -1,5 +1,7 @@
-<h1>Factoids</h1>
+<h1>Chuck Norris Factoids</h1>
 <input type="text" ng-model="category">
 <button type="submit" name="button" ng-click="retrieveFacts(category)">Kick it</button>
 
-<p class="chuckFacts" ng-repeat="fact in facts track by $index">{{ fact.value }}</p>
+<p class="chuckFacts" ng-repeat="fact in facts track by $index">
+  <img ng-src="{{( fact.icon_url )}}">{{ fact.value }}
+</p>

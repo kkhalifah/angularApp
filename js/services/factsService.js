@@ -13,7 +13,7 @@ app.factory('factsFactory', function($http){
       }
     }).then(function successCallback(response) {
       //log the API info
-      console.log(response.data.result);
+      // console.log(response.data.result);
       facts = response.data.result;
     }, function(error) {
       console.log(error);
