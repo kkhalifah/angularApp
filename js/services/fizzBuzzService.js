@@ -4,6 +4,7 @@ var app = angular.module("crushMod");
 app.factory('buzzyFactory', function(){
   console.log("hi")
 var answer = {};
+
 for(var i = 1; i <= 100; i++) {
   if (i % 15 == 0) {
     console.log("FizzBuzz");
