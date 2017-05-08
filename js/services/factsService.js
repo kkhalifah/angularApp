@@ -1,4 +1,4 @@
-// var app = angular.module('crushMod');
+var app = angular.module('crushMod');
 //
 // app.service('nameOfFactory', function(?goes here){
 // // var something = [];
