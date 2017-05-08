@@ -9,7 +9,7 @@ app.controller('factsController', function($scope, $http) {
   $http({
     method: 'GET',
     url: 'https://matchilling-chuck-norris-jokes-v1.p.mashape.com/jokes/search' + '.json',
-    params: { limit : '2' }
+    params: { limit : '3' }
   }).then(function successCallback(response) {
   //log the API info
     console.log(response.data.data.children);
