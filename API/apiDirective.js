@@ -1,7 +1,7 @@
-var app = angular.module('apiName');
+var app = angular.module('crushMod');
 
-app.directive('', function(){
-  return{
+app.directive('', function() {
+  return {
     restrict: 'E',
     replace: false,
     templateUrl:'something.html'
