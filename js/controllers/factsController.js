@@ -8,15 +8,3 @@ app.controller('factsController', function($scope, $http, factsFactory) {
     })
   }
 });
-
-var app = angular.module('crushMod');
-
-app.directive('factsService', function() {
-  return {
-    restrict: 'E',
-    replace: false,
-    templateUrl:'views/facts.html'
-    //template:
-  }
-
-});

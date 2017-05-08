@@ -1,5 +1,5 @@
 <h1>Factoids</h1>
 <input type="text" ng-model="category">
-<button type="submit" name="button" ng-click=retrieveFacts(category)>Kick it</button>
+<button type="submit" name="button" ng-click="retrieveFacts(category)">Kick it</button>
 
-<p class="chuckFacts" ng-repeat="fact in facts track by $index">{{ fact }}</p>
+<p class="chuckFacts" ng-repeat="fact in facts track by $index">{{ fact.value }}</p>

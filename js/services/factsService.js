@@ -9,24 +9,24 @@ app.factory('factsFactory', function($http){
       url: 'https://matchilling-chuck-norris-jokes-v1.p.mashape.com/jokes/search?query=' + category,
       headers: {
         "X-Mashape-Key": "eRTllO9OaOmshQcyTPoYwPvnISj6p1DTRv2jsnildyYtFIy3tq",
-        "Accept": "text/plain"
+        "Accept": "text"
       }
     }).then(function successCallback(response) {
       //log the API info
-      console.log(response.data);
-      facts = response.data;
+      console.log(response.data.result);
+      facts = response.data.result;
     }, function(error) {
       console.log(error);
       })
       return promise;
-  }
+  };
 
   function getFacts() {
     return facts;
-  }
+  };
 
   return {
     setFacts: setFacts,
     getFacts: getFacts
-  }
+  };
 });
