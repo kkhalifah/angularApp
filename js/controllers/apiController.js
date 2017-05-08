@@ -19,3 +19,15 @@ app.controller('factsController', function($scope, $http) {
     })
   };
 });
+
+var app = angular.module('crushMod');
+
+app.directive('', function() {
+  return {
+    restrict: 'E',
+    replace: false,
+    templateUrl:'views/facts.html'
+    //template:
+  }
+
+});
