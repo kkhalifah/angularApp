@@ -9,6 +9,10 @@ $http ({
   .then(function(response){
     console.log(response.data);
   });
+
+  return {
+    somethingHere
+  }
 })
 
 })
