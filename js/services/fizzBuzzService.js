@@ -7,22 +7,24 @@ var input = ""
 return {
 
   setInput:  function (number){
-    if (i % 15 == 0) {
+    if (number % 15 == 0) {
       input = "FizzBuzz";
+      console.log(input);
     }
-    else if (i % 3 == 0) {
+    else if (number % 3 == 0) {
       input = "Fizz";
     }
 
-    else if (i % 5 == 0) {
-      input = "Buzz"
+    else if (number % 5 == 0) {
+      input = "Buzz";
     }
     else {
-        input = i
+        input = "neither fizzing, buzzing, or fizzbuzzing";
     }
 
 },
   getInput: function () {
+    console.log(input);
     return input
   }
 }
