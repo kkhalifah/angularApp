@@ -8,10 +8,10 @@ app.config(function($routeProvider) {
     controller: "fizzController"
   })
 
-  $routeProvider.when('/index', {
+  $routeProvider.when('/facts', {
 
-    templateUrl: "index.html",
-    controller: "fizzController"
+    templateUrl: "views/facts.html",
+    controller: "factsController"
 
   });
 });
