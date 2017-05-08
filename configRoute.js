@@ -8,4 +8,10 @@ app.config(function($routeProvider) {
     controller: "fizzController"
   })
 
-}
+  $routeProvider.when('/index', {
+
+    templateUrl: "index.html",
+    controller: "fizzController"
+
+  });
+});
