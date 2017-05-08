@@ -3,17 +3,27 @@ var app = angular.module("crushMod");
 
 app.factory('buzzyFactory', function(){
   console.log("hi")
-var answer = {};
+var input = ""
+return {
 
-for(var i = 1; i <= 100; i++) {
-  if (i % 15 === 0) {
-    console.log("FizzBuzz");
-  } else if (i % 3 === 0) {
-    console.log("Fizz");
-  } else if (i % 5 === 0) {
-    console.log("Buzz");
-  } else {
-    console.log(i);
+  setInput:  function (number){
+    if (i % 15 == 0) {
+      input = "FizzBuzz";
+    }
+    else if (i % 3 == 0) {
+      input = "Fizz";
+    }
+
+    else if (i % 5 == 0) {
+      input = "Buzz"
+    }
+    else {
+        input = i
+    }
+
+},
+  getInput: function () {
+    return input
   }
 }
 });

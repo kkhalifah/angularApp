@@ -1,5 +1,4 @@
 var app = angular.module('crushMod');
-
 app.controller('factsController', function($scope, $http) {
 
   $scope.facts = [];
@@ -22,7 +21,7 @@ app.controller('factsController', function($scope, $http) {
 
 var app = angular.module('crushMod');
 
-app.directive('', function() {
+app.directive('tempNameFixMe', function() {
   return {
     restrict: 'E',
     replace: false,
