@@ -4,7 +4,7 @@ app.config(function($routeProvider) {
 
   $routeProvider.when('/fizzBuzz', {
 
-    templateUrl: "fizzBuzz.html",
+    templateUrl: "views/fizzBuzz.html",
     controller: "fizzController"
   })
 
@@ -16,4 +16,3 @@ app.config(function($routeProvider) {
   });
 });
 //api info here
-}
