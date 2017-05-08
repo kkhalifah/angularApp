@@ -1,5 +1,4 @@
 var app = angular.module('crushMod');
-
 app.controller('factsController', function($scope, $http) {
 
   $scope.facts = [];
@@ -18,4 +17,16 @@ app.controller('factsController', function($scope, $http) {
     console.log(error);
     })
   };
+});
+
+var app = angular.module('crushMod');
+
+app.directive('tempNameFixMe', function() {
+  return {
+    restrict: 'E',
+    replace: false,
+    templateUrl:'views/facts.html'
+    //template:
+  }
+
 });
