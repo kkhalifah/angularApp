@@ -1,27 +1,17 @@
 var app = angular.module('crushMod');
-app.controller('factsController', function($scope, $http) {
+app.controller('factsController', function($scope, $http, factsFactory) {
 
-  $scope.facts = [];
-
-  $scope.getFacts = function() {
-
-  $http({
-    method: 'GET',
-    url: 'https://matchilling-chuck-norris-jokes-v1.p.mashape.com/jokes/search' + '.json',
-    params: { limit : '3' }
-  }).then(function successCallback(response) {
-  //log the API info
-    console.log(response.data.data.children);
-    $scope.facts = response.data.data.children;
-  }, function(error) {
-    console.log(error);
+  $scope.retrieveFacts = function(category) {
+    factsFactory.setFacts($scope.category).then(function() {
+      $scope.facts = factsFactory.getFacts();
+      console.log($scope.facts);
     })
-  };
+  }
 });
 
 var app = angular.module('crushMod');
 
-app.directive('tempNameFixMe', function() {
+app.directive('factsService', function() {
   return {
     restrict: 'E',
     replace: false,
