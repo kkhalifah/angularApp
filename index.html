@@ -3,21 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>Angular App</title>
-      <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
   </head>
-  <body ng-app="crushMod">
+  <body ng-app="crushMod" ng-controller="fizzController">
+      <!-- Api submit and input buttons -->
+    <input type="text" name="name of API" value="">
+    <button type="submit" name="APIbutton">Submit</button>
 
     <a href="#!/fizzBuzz">Fizz</a>
     <a href="#!/index">Index</a>
       <ng-view></ng-view>
     <!-- <a href="#!/output">Output</a> -->
 
-    <script type="text/javascript" src="lib/angular.min.js"></script>
-    <script type="text/javascript" src="lib/angular-route.min.js"></script>
-    <script type="text/javascript" src="module.js"></script>
-    <script type="text/javascript" src="fizzController.js"></script>
-    <script type="text/javascript" src="configRoute.js"></script>
-    <script type="text/javascript" src="fizzBuzzService.js"></script>
-    <!-- <script type="text/javascript"></script> -->
+
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/angular-route.min.js"></script>
+  <script src="API/apiController.js" charset="utf-8"></script>
+  <script src="API/apiDirective.js" charset="utf-8"></script>
+  <script src="API/apiModule.js" charset="utf-8"></script>
+  <script src="API/apiService.js" charset="utf-8"></script>
+  <script src="js/modules/module.js"></script>
+  <script src="js/controllers/fizzController.js"></script>
+  <script src="js/modules/configRoute.js" charset="utf-8"></script>
   </body>
 </html>
