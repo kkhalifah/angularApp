@@ -1,10 +1,21 @@
-var app = angular.module('apiName');
-app.controller('nameOfController', function($scope, $http){
-console.log("hello from the controller");
-$http.get('http://nameifAPIsite.com' + something + '.json').then(function(response){
-//log the API info
-  console.log(response.data.data.children);
-})
-$scope.posts = response.data.data.children;
-console.log($scope.posts);
+var app = angular.module('crushMod');
+
+app.controller('factsController', function($scope, $http) {
+
+  $scope.facts = [];
+
+  $scope.getFacts = function() {
+
+  $http({
+    method: 'GET',
+    url: 'https://matchilling-chuck-norris-jokes-v1.p.mashape.com/jokes/categories' + '.json',
+    params: {}
+  }).then(function successCallback(response) {
+  //log the API info
+    console.log(response.data.data.children);
+    $scope.posts = response.data.data.children;
+  }, function(error) {
+    console.log(error);
+    })
+  };
 });
